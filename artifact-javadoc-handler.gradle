@@ -25,6 +25,8 @@ if (isAndroidProject()) {
             linksOffline("http://d.android.com/reference", "${android.sdkDirectory}/docs/reference")
             setMemberLevel(JavadocMemberLevel.PUBLIC)
         }
+        
+        failOnError false
     }
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
